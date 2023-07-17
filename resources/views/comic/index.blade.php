@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="text-center">
-        {{-- <h1>
-        Pastas
-        <a href="{{ route('pastas.create') }}">+</a>
-    </h1> --}}
+        <h1>
+            Pastas
+            <a href="{{ route('comics.create') }}">+</a>
+        </h1>
         <h2>Main Comics</h2>
         <ul class="list-unstyled p-5">
             @foreach ($comics as $comic)
