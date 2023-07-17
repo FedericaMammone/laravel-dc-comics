@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="text-center">
-        <h1>{{ $comic->titolo }}</h1>
+        <h1>{{ $comic->title }}</h1>
         <img src="{{ $comic->src }}">
         <div class="row justify-content-between py-4">
             <span class="col">{{ $comic->sale_date }}</span>

@@ -10,9 +10,9 @@
         <ul class="list-unstyled p-5">
             @foreach ($comics as $comic)
                 <li class="m-5 bg-secondary">
-                    {{-- <a href="{{ route('pastas.show', $pasta->id) }}">
-                    {{ $pasta->titolo }}
-                </a> --}}
+                    <a href="{{ route('comics.show', $comic->id) }}">
+                        {{ $comic->titolo }}
+                    </a>
                     <img width="250px" src=" {{ $comic->thumb }}" alt="">
                     {{ $comic->title }} <br> <br>
                     {{ $comic->description }} <br> <br>

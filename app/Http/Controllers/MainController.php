@@ -33,16 +33,16 @@ class MainController extends Controller
     public function store(Request $request)
     {
 
-        $data = $request->all();
+        $comics = $request->all();
 
         $comic = Comic::create([
-            "title" => $data["title"],
-            "description" => $data["description"],
-            "thumb" => $data["thumb"],
-            "price" => $data["price"],
-            "series" => $data["series"],
-            "sale_date" => $data["sale_date"],
-            "type" => $data["type"],
+            "title" => $comics["title"],
+            "description" => $comics["description"],
+            "thumb" => $comics["thumb"],
+            "price" => $comics["price"],
+            "series" => $comics["series"],
+            "sale_date" => $comics["sale_date"],
+            "type" => $comics["type"],
         ]);
 
         return redirect()->route("comics.show", $comic->id);

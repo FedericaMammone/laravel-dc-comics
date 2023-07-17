@@ -9,24 +9,29 @@
 
             @csrf
 
-            <label for="title ">TITLE </label>
+            <label for="title">TITLE </label>
             <br>
-            <input type="text" name="title ">
-            <br>
-
-            <label for="description ">Description </label>
-            <br>
-            <input type="text" name="description ">
+            <input type="text" name="title">
             <br>
 
-            <label for="price ">price </label>
+            <label for="description">Description </label>
             <br>
-            <input type="text" name="price ">
+            <input type="text" name="description">
+            <br>
+
+            <label for="thumb">thumb </label>
+            <br>
+            <input type="text" name="thumb">
+            <br>
+
+            <label for="price">price </label>
+            <br>
+            <input type="text" name="price">
             <br>
 
             <label for="series ">series </label>
             <br>
-            <input type="text" name="series ">
+            <input type="text" name="series">
             <br>
 
             <label for="sale_date">sale_date</label>
@@ -34,9 +39,9 @@
             <input type="text" name="sale_date">
             <br>
 
-            <label for="type ">type </label>
+            <label for="type">type </label>
             <br>
-            <input type="text" name="type ">
+            <input type="text" name="type">
             <br>
 
             <input class="my-3" type="submit" value="CREATE">
