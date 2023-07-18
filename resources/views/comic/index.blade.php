@@ -13,6 +13,19 @@
                     <a href="{{ route('comics.show', $comic->id) }}">
                         {{ $comic->titolo }}
                     </a>
+
+                    <a class="mx-3 btn btn-primary" href="{{ route('comic.edit', $comic->id) }}">
+                        EDIT
+                    </a>
+
+                    <form class="d-inline" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
+
+                        @csrf
+                        @method('DELETE')
+
+                        <input class="mx-3 btn btn-primary" type="submit" value="DELETE">
+                    </form>
+
                     <img width="250px" src=" {{ $comic->thumb }}" alt="">
                     {{ $comic->title }} <br> <br>
                     {{ $comic->description }} <br> <br>

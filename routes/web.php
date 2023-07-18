@@ -26,3 +26,12 @@ Route::post('/comics', [MainController::class, 'store'])
 
 Route::get("/comics/{id}", [MainController::class, "show"])
     ->name('comics.show');
+
+Route::get('/edit/{id}', [MainController::class, "edit"])
+    ->name('comic.edit');
+
+Route::put('/update/{id}', [MainController::class, "update"])
+    ->name('comic.update');
+
+Route::delete('/destroy/{id}', [MainController::class, 'destroy'])
+    ->name('comic.destroy');
