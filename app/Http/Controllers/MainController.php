@@ -33,7 +33,10 @@ class MainController extends Controller
     public function store(Request $request)
     {
 
-        $comics = $request->all();
+        $comics = $request->validate(
+            $this->getValidationRule()
+        );
+
 
         $comic = Comic::create([
             "title" => $comics["title"],
@@ -60,7 +63,9 @@ class MainController extends Controller
     public function update(Request $request, $id)
     {
 
-        $data = $request->all();
+        $data = $request->validate(
+            $this->getValidationRule()
+        );
 
         $comic = Comic::findOrFail($id);
 
@@ -77,5 +82,19 @@ class MainController extends Controller
         $comic->delete();
 
         return redirect()->route('comic.index');
+    }
+
+    private function getValidationRule()
+    {
+
+        return [
+            'title' => 'required|string|max:150',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required|string',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string'
+        ];
     }
 }
